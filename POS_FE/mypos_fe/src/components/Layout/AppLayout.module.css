@@ -1,0 +1,15 @@
+
+
+.app {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* main content */
+.content {            
+  overflow: auto;
+  padding: 12px 16px;
+}
+

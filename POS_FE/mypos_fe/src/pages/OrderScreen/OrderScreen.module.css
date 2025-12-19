@@ -1,0 +1,65 @@
+.wrapper{
+  padding: 12px;
+}
+
+/* small visual tweaks */
+.table-centered td, .table-centered th {
+  vertical-align: middle;
+}
+
+/* badges for statuses (map class names created by replacing spaces) */
+.statusBadge {
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* example status colors */
+.ReadyToPick {
+  border: 1px solid #f59e0b;
+  color: #f59e0b;
+  background: rgba(245,158,11,0.04);
+}
+.Preparing {
+  border: 1px solid #0ea5e9;
+  color: #0ea5e9;
+  background: rgba(14,165,233,0.04);
+}
+.Delivered {
+  border: 1px solid #10b981;
+  color: #10b981;
+  background: rgba(16,185,129,0.04);
+}
+
+/* responsive: allow table scroll on small screens */
+@media (max-width: 767.98px){
+  .wrapper { padding: 8px; }
+}
+
+.cardWrapper {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+}
+
+/* header area inside the card, title aligned left */
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* reduce table spacing inside card */
+.cardWrapper .table {
+  margin-bottom: 0;
+  background: transparent;
+}
+
+/* keep existing rules */
+.table-centered td, .table-centered th {
+  vertical-align: middle;
+}

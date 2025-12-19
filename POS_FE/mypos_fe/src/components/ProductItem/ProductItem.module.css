@@ -1,0 +1,62 @@
+.cardRoot {
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.cardRoot:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* image wrapper to keep images centered and same height */
+.imgWrap {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  overflow: hidden;
+}
+.imgWrap img {
+  max-height: 130px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* small adjustments for text */
+.title {
+  display: inline-block;
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* rating badge smaller and compact */
+.rating {
+  font-size: 0.8rem;
+}
+
+/* avatar button sizes (if project doesn't include these utility classes) */
+.avatar-sm {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}
+
+/* soft button variants if not present in theme */
+.btn-soft-primary {
+  background-color: rgba(102,63,250,0.08);
+  color: #663FFA;
+  border: 1px solid rgba(102,63,250,0.12);
+}
+.btn-soft-danger {
+  background-color: rgba(220,53,69,0.08);
+  color: #dc3545;
+  border: 1px solid rgba(220,53,69,0.12);
+}
+
+/* responsive tweaks */
+@media (max-width: 576px) {
+  .imgWrap { height: 130px; }
+  .title { max-width: 140px; }
+}

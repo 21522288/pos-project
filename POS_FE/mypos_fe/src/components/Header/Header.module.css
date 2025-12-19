@@ -1,0 +1,40 @@
+.appheader {
+  /* fixed full-width header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #663FFA;
+  height: 56px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  z-index: 1040;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* class name kebab/camel must match imports in Header.jsx */
+.buttonToggleMenu {
+  border: none;
+  background: transparent;
+  padding: 6px;
+  margin-right: 8px;
+  border-radius: 6px;
+}
+
+.buttonToggleMenu:hover {
+  background: rgba(255,255,255,0.08);
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.25rem;
+  transition: transform 0.12s ease;
+}
+
+/* helper để đẩy nội dung xuống tránh header */
+.pageContentWithHeader {
+  padding-top: 80px;
+}

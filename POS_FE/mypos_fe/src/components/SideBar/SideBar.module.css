@@ -1,0 +1,100 @@
+/* ...existing code... */
+.sidebar {
+  position: fixed;
+  top: 56px; /* bắt đầu dưới header cao 56px */
+  left: 0;
+  bottom: 0;
+  width: 220px;
+  background: #663FFA;
+  border-right: 1px solid #eee;
+  padding: 12px 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  z-index: 1000;
+  overflow-y: auto;
+
+  /* transition để animation khi show/hide */
+  transform: translateX(0);
+  transition: transform 200ms ease, width 200ms ease;
+}
+
+/* trạng thái đóng (ẩn) */
+.closed {
+  transform: translateX(-100%);
+}
+
+/* trạng thái mở */
+.open {
+  transform: translateX(0);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  transition: background .12s ease, color .12s ease, transform .12s ease;
+}
+
+/* hover */
+.navItem:hover {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* active/current page */
+.active {
+  background: rgba(255,255,255,0.14);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(102,63,250,0.12);
+  position: relative;
+}
+
+/* optional accent bar on left when active */
+.active::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border-radius: 4px;
+  background: #ffffff;
+  opacity: 0.15;
+}
+
+/* icon/label inherit color from navItem */
+.icon {
+  font-size: 1.25rem;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: 14px;
+  line-height: 1;
+  color: inherit;
+}
+
+/* responsive: thu gọn sidebar trên màn nhỏ */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 220px; /* vẫn chiếm full khi mở trên mobile */
+      flex-shrink: 0;
+  }
+  
+  .navItem .label {
+    display: inline; /* giữ label khi sidebar mở; nếu muốn ẩn khi collapsed, thêm logic JS */
+  }
+}
