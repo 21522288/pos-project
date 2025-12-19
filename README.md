@@ -25,7 +25,7 @@ Trước khi chạy project, đảm bảo máy đã cài:
 
 ## ▶️ Run Backend
 1️⃣ Build backend image
-- cd POS_BE/mypos_be
+- cd POS_BE/mypos_be/mypos_be
 - docker build -t pos-backend .
 
 2️⃣ Run backend container
