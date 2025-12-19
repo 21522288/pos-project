@@ -25,18 +25,22 @@ Trước khi chạy project, đảm bảo máy đã cài:
 
 ## ▶️ Run Backend
 1️⃣ Build backend image
-cd POS_BE/mypos_be
-docker build -t pos-backend .
+- cd POS_BE/mypos_be
+- docker build -t pos-backend .
+
 2️⃣ Run backend container
-docker run -p 5001:80 pos-backend
+- docker run -p 5001:80 pos-backend
+
 3️⃣ Test backend API
-GET http://localhost:5001/api/products
+- GET http://localhost:5001/api/products
 
 ## ▶️ Run Frontend
 1️⃣ Build frontend image
-cd POS_FE/mypos_fe
-docker build -t pos-frontend .
+- cd POS_FE/mypos_fe
+- docker build -t pos-frontend .
+
 2️⃣ Run frontend container
-docker run -p 3000:5173 pos-frontend
+- docker run -p 3000:5173 pos-frontend
+
 3️⃣ Open browser
-http://localhost:3000
+- http://localhost:3000
